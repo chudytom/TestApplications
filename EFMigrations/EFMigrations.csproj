@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB16E518-58C4-4994-B879-1D98812485D8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EFMigrations</RootNamespace>
+    <AssemblyName>EFMigrations</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blog.cs" />
+    <Compile Include="Migrations\201808031129134_InitialCreate.cs" />
+    <Compile Include="Migrations\201808031129134_InitialCreate.Designer.cs">
+      <DependentUpon>201808031129134_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808031138374_AddBlogUrl.cs" />
+    <Compile Include="Migrations\201808031138374_AddBlogUrl.Designer.cs">
+      <DependentUpon>201808031138374_AddBlogUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808031153545_RenameBlogUrl.cs" />
+    <Compile Include="Migrations\201808031153545_RenameBlogUrl.Designer.cs">
+      <DependentUpon>201808031153545_RenameBlogUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808031158172_ProperlyRenameBlogUrl.cs" />
+    <Compile Include="Migrations\201808031158172_ProperlyRenameBlogUrl.Designer.cs">
+      <DependentUpon>201808031158172_ProperlyRenameBlogUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808031206213_RenameBlogUrl1.cs" />
+    <Compile Include="Migrations\201808031206213_RenameBlogUrl1.Designer.cs">
+      <DependentUpon>201808031206213_RenameBlogUrl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808031211054_RenameBlogUrl2.cs" />
+    <Compile Include="Migrations\201808031211054_RenameBlogUrl2.Designer.cs">
+      <DependentUpon>201808031211054_RenameBlogUrl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808031219543_AddPostClass.cs" />
+    <Compile Include="Migrations\201808031219543_AddPostClass.Designer.cs">
+      <DependentUpon>201808031219543_AddPostClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808031245222_AddPostAbstract.cs" />
+    <Compile Include="Migrations\201808031245222_AddPostAbstract.Designer.cs">
+      <DependentUpon>201808031245222_AddPostAbstract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Post.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808031129134_InitialCreate.resx">
+      <DependentUpon>201808031129134_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808031138374_AddBlogUrl.resx">
+      <DependentUpon>201808031138374_AddBlogUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808031153545_RenameBlogUrl.resx">
+      <DependentUpon>201808031153545_RenameBlogUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808031158172_ProperlyRenameBlogUrl.resx">
+      <DependentUpon>201808031158172_ProperlyRenameBlogUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808031206213_RenameBlogUrl1.resx">
+      <DependentUpon>201808031206213_RenameBlogUrl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808031211054_RenameBlogUrl2.resx">
+      <DependentUpon>201808031211054_RenameBlogUrl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808031219543_AddPostClass.resx">
+      <DependentUpon>201808031219543_AddPostClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808031245222_AddPostAbstract.resx">
+      <DependentUpon>201808031245222_AddPostAbstract.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

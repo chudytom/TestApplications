@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="AsyncDialog.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsyncDialog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Click="Button_Click" FontSize="36"> Czy jesteś szczęśliwy </Button>
+            <TextBlock x:Name="response" FontSize="36"/>
+            <TextBlock x:Name="ticker" FontSize="36"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>
