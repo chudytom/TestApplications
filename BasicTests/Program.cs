@@ -12,7 +12,13 @@ namespace BasicTests
     {
         static void Main(string[] args)
         {
-            ObservableCollectionTests();
+            ComparisonWithPython();
+        }
+
+        private static void ComparisonWithPython()
+        {
+            Console.Write(String.Join(",", Enumerable.Range(0, 5).Select(x => (x, x ^ 2))));
+            Console.Read();
         }
 
         private static void ObservableCollectionTests()
@@ -65,7 +71,7 @@ namespace BasicTests
                 return tab[n - 1];
             else
             {
-                tab[n-1] =  FibDyn(n - 1) + FibDyn(n - 2);
+                tab[n - 1] = FibDyn(n - 1) + FibDyn(n - 2);
                 return tab[n - 1];
             }
         }
